@@ -1,0 +1,25 @@
+<%- include('partials/header', { title }) %>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">LuxeCurtain Hub</p>
+    <h1>Elegant curtains for homes that deserve better light.</h1>
+    <p class="lead">A clean MVC starter for showcasing premium curtains, featured products, and a polished storefront experience.</p>
+    <a class="button" href="/products">Browse Products</a>
+  </div>
+</section>
+
+<section class="grid-section">
+  <h2>Featured Curtains</h2>
+  <div class="card-grid">
+    <% featuredProducts.forEach((product) => { %>
+      <article class="card">
+        <h3><%= product.name %></h3>
+        <p><%= product.category %></p>
+        <strong>$<%= product.price %></strong>
+      </article>
+    <% }) %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

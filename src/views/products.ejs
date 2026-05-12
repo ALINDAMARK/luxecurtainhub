@@ -1,0 +1,16 @@
+<%- include('partials/header', { title }) %>
+
+<section class="grid-section">
+  <h1>Our Curtain Collection</h1>
+  <div class="card-grid">
+    <% products.forEach((product) => { %>
+      <article class="card">
+        <h3><%= product.name %></h3>
+        <p><%= product.category %></p>
+        <strong>$<%= product.price %></strong>
+      </article>
+    <% }) %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
