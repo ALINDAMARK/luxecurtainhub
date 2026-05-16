@@ -360,7 +360,7 @@ body {
     <section class="hero">
         <div class="hero-copy">
             <div class="eyebrow">Curtain Studio • Uganda</div>
-            <h1>Designed for light, tailored for home.</h1>
+            <h1>Designed for <span class="hero-words"><span class="word active">light</span><span class="word">privacy</span><span class="word">comfort</span></span>, tailored for home.</h1>
             <p class="lead">Explore premium curtains, drapes, blackout panels, and custom window treatments shaped for Ugandan homes and commercial spaces.</p>
             <div class="hero-actions">
                 <a class="cta cta-primary" href="#collection">Browse Collection</a>
@@ -374,7 +374,7 @@ body {
             </div>
         </div>
         <div class="hero-panel">
-            <img src="https://i.pinimg.com/736x/8f/ec/24/8fec2448ee910fb49370ffb4b1b3379e.jpg" alt="Elegant curtains framing a bright interior" loading="lazy">
+            <img class="parallax" src="https://i.pinimg.com/736x/8f/ec/24/8fec2448ee910fb49370ffb4b1b3379e.jpg" alt="Elegant curtains framing a bright interior" loading="lazy">
             <div class="hero-badge">Custom Curtains in Uganda</div>
         </div>
     </section>
