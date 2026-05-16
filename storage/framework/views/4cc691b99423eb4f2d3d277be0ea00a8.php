@@ -55,7 +55,9 @@
 <body>
     <header class="site-header">
         <div class="header-shell">
-            <a class="brand" href="<?php echo e(route('home')); ?>" aria-label="LuxeCurtain Hub home">LuxeCurtain Hub</a>
+            <a class="brand" href="<?php echo e(route('home')); ?>" aria-label="LuxeCurtain Hub home">
+                <img src="<?php echo e(asset('logos/logo-pictorial-5.svg')); ?>" alt="LuxeCurtain Hub" class="brand-logo">
+            </a>
             <nav class="nav-main" aria-label="Primary navigation">
                 <a href="<?php echo e(route('home')); ?>" class="nav-link <?php echo e(request()->routeIs('home') ? 'nav-link--active' : ''); ?>">Home</a>
                 <a href="<?php echo e(route('products')); ?>" class="nav-link <?php echo e(request()->routeIs('products') ? 'nav-link--active' : ''); ?>">Products</a>

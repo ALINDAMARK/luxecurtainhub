@@ -1,0 +1,105 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="richLeft" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" style="stop-color:#f0ede8;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#d4aa6e;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#c9975e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8945a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="richRight" x1="100%" y1="0%" x2="0%">
+      <stop offset="0%" style="stop-color:#f0ede8;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#b8945a;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#c9975e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4aa6e;stop-opacity:0.9" />
+    </linearGradient>
+    <filter id="richShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12" flood-color="#000"/>
+    </filter>
+  </defs>
+  
+  <!-- Luxury background -->
+  <rect width="200" height="200" fill="#f6f5f4"/>
+  
+  <!-- Ornamental border frame -->
+  <rect x="12" y="12" width="176" height="176" rx="12" fill="none" stroke="#b8945a" stroke-width="1" opacity="0.4"/>
+  <rect x="18" y="18" width="164" height="164" rx="8" fill="none" stroke="#d4aa6e" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Subtle room background -->
+  <rect x="35" y="35" width="130" height="130" rx="4" fill="#faf9f7"/>
+  
+  <!-- Left luxury curtain panel -->
+  <g filter="url(#richShadow)">
+    <path d="M 40 40 
+             L 40 160
+             C 38 165 46 165 55 165
+             L 85 165
+             Q 88 162 87 155
+             L 88 42
+             Q 90 40 85 40
+             Z" fill="url(#richLeft)"/>
+    
+    <!-- Rich fabric texture - multiple pleat depths -->
+    <path d="M 48 45 Q 46 75 48 105 Q 46 135 48 160" stroke="#8b7355" stroke-width="1.8" opacity="0.3" fill="none" stroke-linecap="round"/>
+    <path d="M 58 45 Q 56 75 58 105 Q 56 135 58 160" stroke="#7a6b5c" stroke-width="1.4" opacity="0.25" fill="none" stroke-linecap="round"/>
+    <path d="M 68 45 Q 66 75 68 105 Q 66 135 68 160" stroke="#8b7355" stroke-width="1" opacity="0.2" fill="none" stroke-linecap="round"/>
+    <path d="M 78 45 Q 76 75 78 105 Q 76 135 78 160" stroke="#7a6b5c" stroke-width="0.8" opacity="0.15" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Right luxury curtain panel -->
+  <g filter="url(#richShadow)">
+    <path d="M 160 40
+             L 160 160
+             C 162 165 154 165 145 165
+             L 115 165
+             Q 112 162 113 155
+             L 112 42
+             Q 110 40 115 40
+             Z" fill="url(#richRight)"/>
+    
+    <!-- Rich fabric texture - multiple pleat depths -->
+    <path d="M 152 45 Q 154 75 152 105 Q 154 135 152 160" stroke="#7a6b5c" stroke-width="1.8" opacity="0.3" fill="none" stroke-linecap="round"/>
+    <path d="M 142 45 Q 144 75 142 105 Q 144 135 142 160" stroke="#8b7355" stroke-width="1.4" opacity="0.25" fill="none" stroke-linecap="round"/>
+    <path d="M 132 45 Q 134 75 132 105 Q 134 135 132 160" stroke="#7a6b5c" stroke-width="1" opacity="0.2" fill="none" stroke-linecap="round"/>
+    <path d="M 122 45 Q 124 75 122 105 Q 124 135 122 160" stroke="#8b7355" stroke-width="0.8" opacity="0.15" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Premium curtain rod with decorative elements -->
+  <rect x="40" y="37" width="120" height="4" rx="2" fill="#1f1a17"/>
+  <rect x="40" y="37" width="120" height="2" rx="1" fill="#d4aa6e" opacity="0.9"/>
+  
+  <!-- Ornamental rod ends -->
+  <g>
+    <circle cx="44" cy="39" r="4.5" fill="#1f1a17"/>
+    <circle cx="44" cy="39" r="2.5" fill="#d4aa6e" opacity="0.8"/>
+    <circle cx="156" cy="39" r="4.5" fill="#1f1a17"/>
+    <circle cx="156" cy="39" r="2.5" fill="#d4aa6e" opacity="0.8"/>
+  </g>
+  
+  <!-- Center window/light space -->
+  <ellipse cx="100" cy="100" rx="22" ry="35" fill="#fff5eb" opacity="0.4"/>
+  <ellipse cx="100" cy="100" rx="22" ry="35" fill="none" stroke="#d4aa6e" stroke-width="1" opacity="0.15"/>
+  
+  <!-- Elegant tie-back cordons -->
+  <g opacity="0.65">
+    <!-- Left tie-back with decorative tassels -->
+    <path d="M 82 75 Q 75 95 82 115" stroke="#b8945a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="75" cy="85" r="2.5" fill="#b8945a"/>
+    <circle cx="75" cy="105" r="2.5" fill="#b8945a"/>
+  </g>
+  
+  <g opacity="0.65">
+    <!-- Right tie-back with decorative tassels -->
+    <path d="M 118 75 Q 125 95 118 115" stroke="#d4aa6e" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="125" cy="85" r="2.5" fill="#d4aa6e"/>
+    <circle cx="125" cy="105" r="2.5" fill="#d4aa6e"/>
+  </g>
+  
+  <!-- Center vertical accent light -->
+  <line x1="100" y1="45" x2="100" y2="155" stroke="#d4aa6e" stroke-width="0.6" opacity="0.12"/>
+  
+  <!-- Subtle decorative corner flourishes -->
+  <path d="M 40 40 L 50 40" stroke="#b8945a" stroke-width="0.8" opacity="0.2"/>
+  <path d="M 40 40 L 40 50" stroke="#b8945a" stroke-width="0.8" opacity="0.2"/>
+  <path d="M 160 40 L 150 40" stroke="#d4aa6e" stroke-width="0.8" opacity="0.2"/>
+  <path d="M 160 40 L 160 50" stroke="#d4aa6e" stroke-width="0.8" opacity="0.2"/>
+</svg>

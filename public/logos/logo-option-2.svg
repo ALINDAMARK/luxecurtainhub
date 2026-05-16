@@ -1,0 +1,19 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#b8945a" stroke-width="2"/>
+  
+  <!-- Minimalist curtain folds -->
+  <path d="M 70 60 L 70 140" stroke="#d4aa6e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 85 60 Q 82 100 85 140" stroke="#b8945a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 100 60 L 100 140" stroke="#d4aa6e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 115 60 Q 118 100 115 140" stroke="#b8945a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 130 60 L 130 140" stroke="#d4aa6e" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Top rod accent -->
+  <rect x="65" y="55" width="70" height="3" fill="#b8945a" rx="1.5"/>
+  
+  <!-- Bottom bracket accents -->
+  <circle cx="70" cy="145" r="2" fill="#b8945a"/>
+  <circle cx="100" cy="145" r="2" fill="#b8945a"/>
+  <circle cx="130" cy="145" r="2" fill="#b8945a"/>
+</svg>

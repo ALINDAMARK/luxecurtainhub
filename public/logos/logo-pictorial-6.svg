@@ -1,0 +1,104 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="homeLight" cx="50%" cy="40%">
+      <stop offset="0%" style="stop-color:#fff9f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f6f5f4;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="curtainWave1" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" style="stop-color:#d4aa6e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#c9975e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8945a;stop-opacity:0.95" />
+    </linearGradient>
+    <linearGradient id="curtainWave2" x1="100%" y1="0%" x2="0%">
+      <stop offset="0%" style="stop-color:#b8945a;stop-opacity:0.95" />
+      <stop offset="50%" style="stop-color:#c9975e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4aa6e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Warm home background -->
+  <rect width="200" height="200" fill="url(#homeLight)"/>
+  
+  <!-- Artistic frame border -->
+  <path d="M 20 20 L 180 20 Q 185 20 185 25 L 185 175 Q 185 180 180 180 L 20 180 Q 15 180 15 175 L 15 25 Q 15 20 20 20" 
+        fill="none" stroke="#b8945a" stroke-width="1.5" opacity="0.35"/>
+  
+  <!-- Room suggestion with house roof -->
+  <path d="M 30 60 L 100 35 L 170 60 L 170 165 L 30 165 Z" fill="none" stroke="#b8945a" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Interior wall panel -->
+  <rect x="28" y="58" width="144" height="110" fill="#faf9f7" opacity="0.6" rx="3"/>
+  
+  <!-- Left heavy drape curtain -->
+  <path d="M 30 50 
+           L 30 165
+           C 28 170 36 170 45 170
+           L 80 170
+           Q 85 168 83 160
+           L 85 52
+           Q 87 50 80 50
+           Z" fill="url(#curtainWave1)" opacity="0.92"/>
+  
+  <!-- Left curtain 3D pleated folds -->
+  <path d="M 42 55 Q 40 85 43 115 Q 40 145 42 165" stroke="#8b7355" stroke-width="2" opacity="0.35" fill="none" stroke-linecap="round"/>
+  <path d="M 55 55 Q 52 85 55 115 Q 52 145 55 165" stroke="#8b7355" stroke-width="1.5" opacity="0.25" fill="none" stroke-linecap="round"/>
+  <path d="M 68 55 Q 66 85 68 115 Q 66 145 68 165" stroke="#8b7355" stroke-width="1" opacity="0.2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Right heavy drape curtain -->
+  <path d="M 170 50
+           L 170 165
+           C 172 170 164 170 155 170
+           L 120 170
+           Q 115 168 117 160
+           L 115 52
+           Q 113 50 120 50
+           Z" fill="url(#curtainWave2)" opacity="0.92"/>
+  
+  <!-- Right curtain 3D pleated folds -->
+  <path d="M 158 55 Q 160 85 157 115 Q 160 145 158 165" stroke="#7a6b5c" stroke-width="2" opacity="0.35" fill="none" stroke-linecap="round"/>
+  <path d="M 145 55 Q 148 85 145 115 Q 148 145 145 165" stroke="#7a6b5c" stroke-width="1.5" opacity="0.25" fill="none" stroke-linecap="round"/>
+  <path d="M 132 55 Q 134 85 132 115 Q 134 145 132 165" stroke="#7a6b5c" stroke-width="1" opacity="0.2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Premium mounting rod -->
+  <g>
+    <rect x="30" y="47" width="140" height="5" rx="2.5" fill="#1f1a17"/>
+    <rect x="30" y="47" width="140" height="2.5" rx="1.25" fill="#d4aa6e" opacity="0.85"/>
+    
+    <!-- Rod support brackets -->
+    <g fill="#1f1a17">
+      <rect x="32" y="50" width="3" height="6" rx="1"/>
+      <rect x="165" y="50" width="3" height="6" rx="1"/>
+    </g>
+  </g>
+  
+  <!-- Ornamental curtain rings/hooks -->
+  <circle cx="45" cy="48" r="3" fill="none" stroke="#d4aa6e" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="80" cy="48" r="3" fill="none" stroke="#d4aa6e" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="120" cy="48" r="3" fill="none" stroke="#d4aa6e" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="155" cy="48" r="3" fill="none" stroke="#d4aa6e" stroke-width="1.5" opacity="0.6"/>
+  
+  <!-- Window pane behind curtains -->
+  <rect x="88" y="70" width="24" height="50" rx="2" fill="none" stroke="#b8945a" stroke-width="1" opacity="0.2"/>
+  <line x1="100" y1="70" x2="100" y2="120" stroke="#b8945a" stroke-width="0.8" opacity="0.1"/>
+  <line x1="88" y1="95" x2="112" y2="95" stroke="#b8945a" stroke-width="0.8" opacity="0.1"/>
+  
+  <!-- Sunlight glow effect -->
+  <ellipse cx="100" cy="85" rx="18" ry="28" fill="#fff5eb" opacity="0.35"/>
+  
+  <!-- Decorative tie-back/holdback ropes with tassels -->
+  <g opacity="0.7">
+    <path d="M 80 75 Q 72 95 78 115" stroke="#b8945a" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Tassel details -->
+    <circle cx="70" cy="85" r="2" fill="#b8945a"/>
+    <circle cx="70" cy="100" r="2" fill="#b8945a"/>
+    <line x1="70" y1="115" x2="70" y2="120" stroke="#b8945a" stroke-width="1.5" opacity="0.7"/>
+  </g>
+  
+  <g opacity="0.7">
+    <path d="M 120 75 Q 128 95 122 115" stroke="#d4aa6e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Tassel details -->
+    <circle cx="130" cy="85" r="2" fill="#d4aa6e"/>
+    <circle cx="130" cy="100" r="2" fill="#d4aa6e"/>
+    <line x1="130" y1="115" x2="130" y2="120" stroke="#d4aa6e" stroke-width="1.5" opacity="0.7"/>
+  </g>
+</svg>

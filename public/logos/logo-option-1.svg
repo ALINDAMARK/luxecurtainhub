@@ -1,0 +1,23 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="#f6f5f4"/>
+  
+  <!-- Curtain folds - left side -->
+  <path d="M 60 50 Q 50 75 55 100 Q 50 125 60 150" stroke="#b8945a" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M 75 50 Q 70 75 72 100 Q 70 125 75 150" stroke="#d4aa6e" stroke-width="6" fill="none" stroke-linecap="round"/>
+  
+  <!-- Curtain folds - right side -->
+  <path d="M 140 50 Q 150 75 145 100 Q 150 125 140 150" stroke="#b8945a" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M 125 50 Q 130 75 128 100 Q 130 125 125 150" stroke="#d4aa6e" stroke-width="6" fill="none" stroke-linecap="round"/>
+  
+  <!-- Center accent line -->
+  <line x1="100" y1="50" x2="100" y2="150" stroke="#d4aa6e" stroke-width="2"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="100" cy="70" r="4" fill="#b8945a"/>
+  <circle cx="100" cy="100" r="4" fill="#b8945a"/>
+  <circle cx="100" cy="130" r="4" fill="#b8945a"/>
+  
+  <!-- Brand name below (optional) -->
+  <text x="100" y="175" font-family="'Cormorant Garamond', serif" font-size="14" font-weight="600" text-anchor="middle" fill="#1f1a17">LUXECURTAIN</text>
+</svg>
