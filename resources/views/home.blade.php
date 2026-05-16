@@ -434,7 +434,8 @@ body {
         <div class="hero-copy">
             <div class="eyebrow">Curtain Studio • Uganda</div>
             <h1>
-                Designed for <span class="hero-words"><span class="word active">light</span><span class="word">privacy</span><span class="word">comfort</span></span>
+                <span class="hero-line">Designed for</span>
+                <span class="hero-words"><span class="word active">light</span><span class="word">privacy</span><span class="word">comfort</span></span>
                 <span class="hero-line">tailored for home.</span>
             </h1>
             <p class="lead">Explore premium curtains, drapes, blackout panels, and custom window treatments shaped for Ugandan homes and commercial spaces.</p>

@@ -187,15 +187,11 @@ body::after {
 }
 
 /* Hero animated words */
-.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.6rem, 5.8vw, 5.2rem); line-height: .92; color: var(--dark); }
-.hero .hero-words { display: inline-block; vertical-align: baseline; position: relative; width: 7.4ch; height: 1em; overflow: hidden; margin: 0 .12em; line-height: 1; }
-.hero .hero-words .word { position: absolute; inset: 0; display: block; line-height: 1; white-space: nowrap; transform: translateY(110%); opacity: 0; transition: transform .45s cubic-bezier(.2,.9,.2,1), opacity .35s ease; }
+.hero h1 { display: grid; gap: .1em; font-family: 'Cormorant Garamond', serif; font-size: clamp(2.6rem, 5.8vw, 5.2rem); line-height: .9; color: var(--dark); }
+.hero .hero-line { display: block; }
+.hero .hero-words { display: inline-grid; justify-self: start; position: relative; width: 7ch; height: 1.02em; overflow: hidden; }
+.hero .hero-words .word { grid-area: 1 / 1; display: block; transform: translateY(110%); opacity: 0; transition: transform .45s cubic-bezier(.2,.9,.2,1), opacity .25s ease; }
 .hero .hero-words .word.active { transform: translateY(0%); opacity: 1; }
-
-.hero .hero-line {
-  display: block;
-  margin-top: .08em;
-}
 
 /* Card hover lift */
 .product-card:hover,
@@ -274,8 +270,8 @@ h3 {
 
 .footer-col {
   display: grid;
-  gap: .85rem;
-  padding: 0 .25rem;
+  gap: .65rem;
+  padding: 0;
 }
 
 .footer-title {
@@ -289,8 +285,8 @@ h3 {
 .footer-list {
   list-style: none;
   display: grid;
-  gap: .5rem;
-  margin-top: .15rem;
+  gap: .35rem;
+  margin-top: .1rem;
 }
 
 .footer-list a,
@@ -299,10 +295,6 @@ h3 {
   text-decoration: none;
   font-size: .95rem;
   transition: color .2s ease;
-}
-
-.footer-list li {
-  padding: .12rem 0;
 }
 
 .footer-list a:hover,
@@ -314,15 +306,14 @@ h3 {
   margin: 0;
   font-size: .95rem;
   color: var(--muted);
-  line-height: 1.6;
-  padding: .1rem 0;
+  line-height: 1.55;
 }
 
 .footer-desc {
   font-size: .9rem;
   color: var(--muted);
-  line-height: 1.7;
-  margin-top: .2rem;
+  line-height: 1.65;
+  margin-top: .1rem;
 }
 
 .footer-bottom {
@@ -333,7 +324,7 @@ h3 {
   flex-wrap: wrap;
   color: #7d6c61;
   font-size: .85rem;
-  padding-top: 1rem;
+  padding-top: .75rem;
 }
 
 .footer-brand {
@@ -354,7 +345,6 @@ h3 {
 
 .footer-copyright {
   margin: 0;
-  padding-top: .2rem;
   letter-spacing: .04em;
   line-height: 1.5;
 }
