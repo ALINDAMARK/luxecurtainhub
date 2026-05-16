@@ -131,7 +131,7 @@ body::after {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 1rem 1.5rem;
-  padding: 1.2rem 1.25rem;
+  padding: 1.2rem 2rem 1.2rem 1.25rem;
 }
 
 .nav-link {
@@ -483,7 +483,7 @@ h3 {
   }
 
   .nav-main {
-    padding: 1rem 1.25rem;
+    padding: 1rem 2rem 1rem 1.25rem;
   }
 
   .footer-shell {
@@ -517,7 +517,7 @@ h3 {
     width: 100%;
     justify-content: flex-start;
     gap: .75rem 1rem;
-    padding: 0 1.25rem 1rem;
+    padding: 0 1.25rem 1rem 1.25rem;
   }
 
   .nav-link {
