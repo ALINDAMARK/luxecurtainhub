@@ -53,13 +53,15 @@
 </head>
 <body>
     <header class="site-header">
-        <a class="brand" href="{{ route('home') }}" aria-label="LuxeCurtain Hub home">LuxeCurtain Hub</a>
-        <nav class="nav-main" aria-label="Primary navigation">
-            <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'nav-link--active' : '' }}">Home</a>
-            <a href="{{ route('products') }}" class="nav-link {{ request()->routeIs('products') ? 'nav-link--active' : '' }}">Products</a>
-            <a href="{{ route('home') }}#signature" class="nav-link">Collection</a>
-            <a href="{{ route('home') }}#contact" class="nav-link">Contact</a>
-        </nav>
+        <div class="header-shell">
+            <a class="brand" href="{{ route('home') }}" aria-label="LuxeCurtain Hub home">LuxeCurtain Hub</a>
+            <nav class="nav-main" aria-label="Primary navigation">
+                <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'nav-link--active' : '' }}">Home</a>
+                <a href="{{ route('products') }}" class="nav-link {{ request()->routeIs('products') ? 'nav-link--active' : '' }}">Products</a>
+                <a href="{{ route('home') }}#signature" class="nav-link">Collection</a>
+                <a href="{{ route('home') }}#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <main>
