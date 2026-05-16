@@ -98,7 +98,7 @@
                 <p class="footer-brand">LUXECURTAIN HB</p>
                 <p class="footer-tagline">Premium Curtain Collections · Uganda</p>
             </div>
-            <p class="footer-copyright">© 2026 LuxeCurtain Hub · All rights reserved.</p>
+            <p class="footer-copyright">© 2026 LuxeCurtain Hub. All rights reserved.</p>
         </div>
     </footer>
 

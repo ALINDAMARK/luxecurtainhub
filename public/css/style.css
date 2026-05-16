@@ -275,6 +275,7 @@ h3 {
 .footer-col {
   display: grid;
   gap: .85rem;
+  padding: 0 .25rem;
 }
 
 .footer-title {
@@ -289,6 +290,7 @@ h3 {
   list-style: none;
   display: grid;
   gap: .5rem;
+  margin-top: .15rem;
 }
 
 .footer-list a,
@@ -297,6 +299,10 @@ h3 {
   text-decoration: none;
   font-size: .95rem;
   transition: color .2s ease;
+}
+
+.footer-list li {
+  padding: .12rem 0;
 }
 
 .footer-list a:hover,
@@ -309,12 +315,14 @@ h3 {
   font-size: .95rem;
   color: var(--muted);
   line-height: 1.6;
+  padding: .1rem 0;
 }
 
 .footer-desc {
   font-size: .9rem;
   color: var(--muted);
   line-height: 1.7;
+  margin-top: .2rem;
 }
 
 .footer-bottom {
@@ -325,6 +333,7 @@ h3 {
   flex-wrap: wrap;
   color: #7d6c61;
   font-size: .85rem;
+  padding-top: 1rem;
 }
 
 .footer-brand {
@@ -345,6 +354,9 @@ h3 {
 
 .footer-copyright {
   margin: 0;
+  padding-top: .2rem;
+  letter-spacing: .04em;
+  line-height: 1.5;
 }
 
 /* ═══════════════ SIGNATURE PIECES SECTION ═══════════════ */
