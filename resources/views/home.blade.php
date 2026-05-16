@@ -160,6 +160,13 @@ body {
     box-shadow: 0 14px 36px rgba(31, 26, 23, 0.08);
 }
 
+.product-card,
+.story-card,
+.gallery-card,
+.sig-card {
+    cursor: pointer;
+}
+
 .product-card img,
 .story-card img {
     width: 100%;
@@ -249,6 +256,7 @@ body {
 
 .gallery-card {
     min-height: 180px;
+    position: relative;
 }
 
 .gallery-card img {
@@ -256,6 +264,26 @@ body {
     height: 180px;
     object-fit: cover;
     display: block;
+}
+
+.gallery-caption {
+    position: absolute;
+    left: .75rem;
+    right: .75rem;
+    bottom: .75rem;
+    padding: .75rem .9rem;
+    border-radius: 16px;
+    background: rgba(255,255,255,.7);
+    backdrop-filter: blur(12px);
+    color: #1f1a17;
+    box-shadow: 0 10px 28px rgba(31,26,23,.12);
+}
+
+.gallery-caption .meta {
+    display: block;
+    font-size: .62rem;
+    letter-spacing: .18em;
+    line-height: 1.4;
 }
 
 .contact-wrap {
@@ -331,6 +359,13 @@ body {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .gallery-caption {
+        left: .5rem;
+        right: .5rem;
+        bottom: .5rem;
+        padding: .6rem .75rem;
+    }
 }
 
 @media (max-width: 640px) {
@@ -350,6 +385,44 @@ body {
     .stat-row,
     .gallery-grid {
         grid-template-columns: 1fr;
+    }
+
+    .gallery-caption {
+        left: .5rem;
+        right: .5rem;
+        bottom: .5rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .page-shell {
+        width: min(1360px, calc(100% - 3rem));
+    }
+
+    .hero {
+        grid-template-columns: 1.1fr .9fr;
+        gap: 2.5rem;
+    }
+
+    .hero-panel {
+        min-height: 660px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (hover: none) {
+    .sig-over {
+        opacity: 1;
+        transform: translateY(0);
+        background: linear-gradient(0deg, rgba(31, 26, 23, 0.9) 0%, rgba(31, 26, 23, 0.35) 55%, transparent 100%);
+    }
+
+    .gallery-caption {
+        background: rgba(255,255,255,.78);
     }
 }
 </style>
@@ -440,7 +513,11 @@ body {
         </div>
         <div class="card-grid">
             @foreach ($featuredProducts as $product)
-                <article class="product-card">
+                <article class="product-card js-product-card" tabindex="0"
+                    data-image="{{ $product['image_url'] ?? 'https://i.pinimg.com/736x/87/79/54/877954c4a6f8f6549608182d802d1d2b.jpg' }}"
+                    data-title="{{ $product['name'] }}"
+                    data-category="{{ $product['category'] }}"
+                    data-description="{{ $product['description'] ?? 'Premium curtain design chosen for timeless interiors.' }}">
                     <img src="{{ $product['image_url'] ?? 'https://i.pinimg.com/736x/87/79/54/877954c4a6f8f6549608182d802d1d2b.jpg' }}" alt="{{ $product['name'] }}" loading="lazy">
                     <div class="body">
                         <div class="meta">{{ $product['category'] }}</div>
@@ -480,9 +557,13 @@ body {
         </div>
         <div class="gallery-grid">
             @foreach ($lookbookImages as $image)
-                <article class="gallery-card">
+                <article class="gallery-card js-gallery-card" tabindex="0"
+                    data-image="{{ $image['image_url'] }}"
+                    data-title="{{ $image['title'] }}"
+                    data-category="{{ $image['caption'] ?? $image['title'] }}"
+                    data-description="{{ $image['alt_text'] }}">
                     <img src="{{ $image['image_url'] }}" alt="{{ $image['alt_text'] }}" loading="lazy">
-                    <div class="body">
+                    <div class="gallery-caption">
                         <div class="meta">{{ $image['caption'] ?? $image['title'] }}</div>
                     </div>
                 </article>

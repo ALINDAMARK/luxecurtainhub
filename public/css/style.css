@@ -106,12 +106,14 @@ body::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
-  backdrop-filter: blur(8px);
+  gap: 2rem;
+  padding: 1.2rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(247, 239, 231, 0.8);
+  background: var(--bg);
+  border-bottom: 1px solid rgba(31, 26, 23, 0.06);
+  backdrop-filter: blur(8px);
 }
 
 .brand {
@@ -124,7 +126,9 @@ body::after {
 
 .nav-main {
   display: flex;
-  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 1rem 1.5rem;
 }
 
 .nav-link {
@@ -138,19 +142,25 @@ body::after {
 }
 
 .nav-link::before {
-  content: attr(data-num) ' ';
-  display: inline-block;
-  margin-right: .6rem;
-  color: var(--accent);
-  font-weight: 600;
-  letter-spacing: .08em;
-  opacity: .95;
-  transition: opacity .2s ease;
+  content: '';
+  display: none;
 }
 
 .nav-link:hover {
   color: var(--accent-2);
   transform: translateY(-2px);
+}
+
+.nav-link--active {
+  color: var(--accent-2);
+}
+
+.nav-link--active::after {
+  width: 100%;
+}
+
+.nav-link--active::before {
+  opacity: 1;
 }
 
 .nav-link::after {
@@ -240,9 +250,93 @@ h3 {
 }
 
 .site-footer {
-  padding: 3rem 0 2rem;
+  padding: 2.75rem 0 1.5rem;
   color: #6f5c51;
+}
+
+.footer-shell {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
   border-top: 1px solid rgba(31, 26, 23, 0.06);
+  border-bottom: 1px solid rgba(31, 26, 23, 0.06);
+  margin-bottom: 1.5rem;
+}
+
+.footer-col {
+  display: grid;
+  gap: .85rem;
+}
+
+.footer-title {
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.footer-list {
+  list-style: none;
+  display: grid;
+  gap: .5rem;
+}
+
+.footer-list a,
+.footer-item a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .95rem;
+  transition: color .2s ease;
+}
+
+.footer-list a:hover,
+.footer-item a:hover {
+  color: var(--accent-2);
+}
+
+.footer-item {
+  margin: 0;
+  font-size: .95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.footer-desc {
+  font-size: .9rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: #7d6c61;
+  font-size: .85rem;
+}
+
+.footer-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: .08em;
+  color: var(--dark);
+  margin: 0;
+}
+
+.footer-tagline {
+  font-size: .75rem;
+  letter-spacing: .12em;
+  color: var(--accent);
+  margin: .25rem 0 0;
+}
+
+.footer-copyright {
+  margin: 0;
 }
 
 /* ═══════════════ SIGNATURE PIECES SECTION ═══════════════ */
@@ -375,6 +469,17 @@ h3 {
 }
 
 @media (max-width: 900px) {
+  .site-header {
+    padding: 1rem 0;
+    gap: 1.5rem;
+  }
+
+  .footer-shell {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+
   .sig-grid {
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: auto;
@@ -384,6 +489,35 @@ h3 {
 }
 
 @media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .9rem;
+    padding: 1rem 0;
+  }
+
+  .nav-main {
+    width: 100%;
+    justify-content: flex-start;
+    gap: .75rem 1rem;
+  }
+
+  .nav-link {
+    font-size: .88rem;
+  }
+
+  .footer-shell {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+  }
+
   .sig-grid { grid-template-columns: 1fr; }
   .sig-card .sig-img { padding-bottom: 60%; }
 }

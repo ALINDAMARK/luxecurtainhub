@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $title ?? 'LuxeCurtain Hub' }}</title>
-    <meta name="description" content="{{ $metaDescription ?? 'LuxeCurtain Hub designs and installs premium custom curtains, drapes, blackout panels, and sheer window treatments.' }}">
-    <meta name="keywords" content="{{ $metaKeywords ?? 'curtains, custom curtains, drapes, blackout curtains, sheer curtains, curtain installation, Uganda curtains' }}">
+    <title><?php echo e($title ?? 'LuxeCurtain Hub'); ?></title>
+    <meta name="description" content="<?php echo e($metaDescription ?? 'LuxeCurtain Hub designs and installs premium custom curtains, drapes, blackout panels, and sheer window treatments.'); ?>">
+    <meta name="keywords" content="<?php echo e($metaKeywords ?? 'curtains, custom curtains, drapes, blackout curtains, sheer curtains, curtain installation, Uganda curtains'); ?>">
     <meta name="theme-color" content="#0d0b09">
-    <link rel="canonical" href="{{ $canonicalUrl ?? url()->current() }}">
+    <link rel="canonical" href="<?php echo e($canonicalUrl ?? url()->current()); ?>">
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
     <meta property="og:site_name" content="LuxeCurtain Hub">
     <meta property="og:locale" content="en_UG">
-    <meta property="og:title" content="{{ $title ?? 'LuxeCurtain Hub' }}">
-    <meta property="og:description" content="{{ $metaDescription ?? 'LuxeCurtain Hub designs and installs premium custom curtains, drapes, blackout panels, and sheer window treatments.' }}">
-    <meta property="og:url" content="{{ $canonicalUrl ?? url()->current() }}">
-    <meta property="og:type" content="{{ $pageType ?? 'website' }}">
-    <meta property="og:image" content="{{ $ogImage ?? 'https://i.pinimg.com/736x/87/79/54/877954c4a6f8f6549608182d802d1d2b.jpg' }}">
+    <meta property="og:title" content="<?php echo e($title ?? 'LuxeCurtain Hub'); ?>">
+    <meta property="og:description" content="<?php echo e($metaDescription ?? 'LuxeCurtain Hub designs and installs premium custom curtains, drapes, blackout panels, and sheer window treatments.'); ?>">
+    <meta property="og:url" content="<?php echo e($canonicalUrl ?? url()->current()); ?>">
+    <meta property="og:type" content="<?php echo e($pageType ?? 'website'); ?>">
+    <meta property="og:image" content="<?php echo e($ogImage ?? 'https://i.pinimg.com/736x/87/79/54/877954c4a6f8f6549608182d802d1d2b.jpg'); ?>">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ $title ?? 'LuxeCurtain Hub' }}">
-    <meta name="twitter:description" content="{{ $metaDescription ?? 'LuxeCurtain Hub designs and installs premium custom curtains, drapes, blackout panels, and sheer window treatments.' }}">
-    <meta name="twitter:image" content="{{ $ogImage ?? 'https://i.pinimg.com/736x/87/79/54/877954c4a6f8f6549608182d802d1d2b.jpg' }}">
+    <meta name="twitter:title" content="<?php echo e($title ?? 'LuxeCurtain Hub'); ?>">
+    <meta name="twitter:description" content="<?php echo e($metaDescription ?? 'LuxeCurtain Hub designs and installs premium custom curtains, drapes, blackout panels, and sheer window treatments.'); ?>">
+    <meta name="twitter:image" content="<?php echo e($ogImage ?? 'https://i.pinimg.com/736x/87/79/54/877954c4a6f8f6549608182d802d1d2b.jpg'); ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    @stack('head')
+    <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
+    <?php echo $__env->yieldPushContent('head'); ?>
     <script type="application/ld+json">
-        {!! json_encode([
+        <?php echo json_encode([
             '@context' => 'https://schema.org',
             '@type' => 'Store',
             'name' => 'LuxeCurtain Hub',
@@ -48,22 +48,23 @@
                 'availableLanguage' => ['English'],
             ]],
             'sameAs' => [],
-        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>
+
     </script>
 </head>
 <body>
     <header class="site-header">
-        <a class="brand" href="{{ route('home') }}" aria-label="LuxeCurtain Hub home">LuxeCurtain Hub</a>
+        <a class="brand" href="<?php echo e(route('home')); ?>" aria-label="LuxeCurtain Hub home">LuxeCurtain Hub</a>
         <nav class="nav-main" aria-label="Primary navigation">
-            <a href="{{ route('home') }}" class="nav-link {{ request()->routeIs('home') ? 'nav-link--active' : '' }}">Home</a>
-            <a href="{{ route('products') }}" class="nav-link {{ request()->routeIs('products') ? 'nav-link--active' : '' }}">Products</a>
-            <a href="{{ route('home') }}#signature" class="nav-link">Collection</a>
-            <a href="{{ route('home') }}#contact" class="nav-link">Contact</a>
+            <a href="<?php echo e(route('home')); ?>" class="nav-link <?php echo e(request()->routeIs('home') ? 'nav-link--active' : ''); ?>">Home</a>
+            <a href="<?php echo e(route('products')); ?>" class="nav-link <?php echo e(request()->routeIs('products') ? 'nav-link--active' : ''); ?>">Products</a>
+            <a href="<?php echo e(route('home')); ?>#signature" class="nav-link">Collection</a>
+            <a href="<?php echo e(route('home')); ?>#contact" class="nav-link">Contact</a>
         </nav>
     </header>
 
     <main>
-        @yield('content')
+        <?php echo $__env->yieldContent('content'); ?>
     </main>
 
     <footer class="site-footer">
@@ -71,10 +72,10 @@
             <div class="footer-col">
                 <h4 class="footer-title">Explore</h4>
                 <ul class="footer-list">
-                    <li><a href="{{ route('home') }}">Home</a></li>
-                    <li><a href="{{ route('products') }}">Products</a></li>
-                    <li><a href="{{ route('home') }}#signature">Collection</a></li>
-                    <li><a href="{{ route('home') }}#contact">Contact</a></li>
+                    <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
+                    <li><a href="<?php echo e(route('products')); ?>">Products</a></li>
+                    <li><a href="<?php echo e(route('home')); ?>#signature">Collection</a></li>
+                    <li><a href="<?php echo e(route('home')); ?>#contact">Contact</a></li>
                 </ul>
             </div>
 
@@ -123,6 +124,7 @@
         </div>
     </div>
 
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="<?php echo e(asset('js/main.js')); ?>"></script>
 </body>
 </html>
+<?php /**PATH C:\Users\MARK ARINDA\Desktop\LuxeCurtainHub\resources\views/layouts/app.blade.php ENDPATH**/ ?>
