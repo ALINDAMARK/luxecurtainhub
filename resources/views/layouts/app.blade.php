@@ -71,6 +71,29 @@
         <p>© 2026 LuxeCurtain Hub · All rights reserved.</p>
     </footer>
 
+    <div class="image-modal" id="image-modal" aria-hidden="true">
+        <div class="image-modal__backdrop" data-modal-close></div>
+        <div class="image-modal__panel" role="dialog" aria-modal="true" aria-labelledby="image-modal-title">
+            <button class="image-modal__close" type="button" data-modal-close aria-label="Close details">×</button>
+            <button class="image-modal__nav image-modal__nav--prev" type="button" id="image-modal-prev" aria-label="Previous image">‹</button>
+            <button class="image-modal__nav image-modal__nav--next" type="button" id="image-modal-next" aria-label="Next image">›</button>
+            <div class="image-modal__media">
+                <img id="image-modal-img" src="" alt="">
+                <div class="image-modal__count" id="image-modal-count"></div>
+            </div>
+            <div class="image-modal__content">
+                <p class="image-modal__eyebrow" id="image-modal-kicker"></p>
+                <h3 id="image-modal-title"></h3>
+                <p class="image-modal__category" id="image-modal-category"></p>
+                <p class="image-modal__desc" id="image-modal-desc"></p>
+                <div class="image-modal__actions">
+                    <button class="image-modal__request" type="button" id="image-modal-request">Request this style</button>
+                    <a class="image-modal__link" href="#contact">Go to consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="{{ asset('js/main.js') }}"></script>
 </body>
 </html>
