@@ -54,13 +54,15 @@
 </head>
 <body>
     <header class="site-header">
-        <a class="brand" href="<?php echo e(route('home')); ?>" aria-label="LuxeCurtain Hub home">LuxeCurtain Hub</a>
-        <nav class="nav-main" aria-label="Primary navigation">
-            <a href="<?php echo e(route('home')); ?>" class="nav-link <?php echo e(request()->routeIs('home') ? 'nav-link--active' : ''); ?>">Home</a>
-            <a href="<?php echo e(route('products')); ?>" class="nav-link <?php echo e(request()->routeIs('products') ? 'nav-link--active' : ''); ?>">Products</a>
-            <a href="<?php echo e(route('home')); ?>#signature" class="nav-link">Collection</a>
-            <a href="<?php echo e(route('home')); ?>#contact" class="nav-link">Contact</a>
-        </nav>
+        <div class="header-shell">
+            <a class="brand" href="<?php echo e(route('home')); ?>" aria-label="LuxeCurtain Hub home">LuxeCurtain Hub</a>
+            <nav class="nav-main" aria-label="Primary navigation">
+                <a href="<?php echo e(route('home')); ?>" class="nav-link <?php echo e(request()->routeIs('home') ? 'nav-link--active' : ''); ?>">Home</a>
+                <a href="<?php echo e(route('products')); ?>" class="nav-link <?php echo e(request()->routeIs('products') ? 'nav-link--active' : ''); ?>">Products</a>
+                <a href="<?php echo e(route('home')); ?>#signature" class="nav-link">Collection</a>
+                <a href="<?php echo e(route('home')); ?>#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -68,36 +70,38 @@
     </main>
 
     <footer class="site-footer">
-        <div class="footer-shell">
-            <div class="footer-col">
-                <h4 class="footer-title">Explore</h4>
-                <ul class="footer-list">
-                    <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
-                    <li><a href="<?php echo e(route('products')); ?>">Products</a></li>
-                    <li><a href="<?php echo e(route('home')); ?>#signature">Collection</a></li>
-                    <li><a href="<?php echo e(route('home')); ?>#contact">Contact</a></li>
-                </ul>
+        <div class="footer-wrapper">
+            <div class="footer-shell">
+                <div class="footer-col">
+                    <h4 class="footer-title">Explore</h4>
+                    <ul class="footer-list">
+                        <li><a href="<?php echo e(route('home')); ?>">Home</a></li>
+                        <li><a href="<?php echo e(route('products')); ?>">Products</a></li>
+                        <li><a href="<?php echo e(route('home')); ?>#signature">Collection</a></li>
+                        <li><a href="<?php echo e(route('home')); ?>#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <p class="footer-item"><a href="mailto:arrindamark@gmail.com">arrindamark@gmail.com</a></p>
+                    <p class="footer-item"><a href="tel:+256772513055">+256 772 513 055</a></p>
+                    <p class="footer-item">Kampala, Uganda</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">About</h4>
+                    <p class="footer-desc">Premium curtain styling, bespoke fittings, and measured installations for homes and commercial spaces across Uganda.</p>
+                </div>
             </div>
 
-            <div class="footer-col">
-                <h4 class="footer-title">Contact</h4>
-                <p class="footer-item"><a href="mailto:arrindamark@gmail.com">arrindamark@gmail.com</a></p>
-                <p class="footer-item"><a href="tel:+256772513055">+256 772 513 055</a></p>
-                <p class="footer-item">Kampala, Uganda</p>
+            <div class="footer-bottom">
+                <div>
+                    <p class="footer-brand">LUXECURTAIN HB</p>
+                    <p class="footer-tagline">Premium Curtain Collections · Uganda</p>
+                </div>
+                <p class="footer-copyright">© 2026 LuxeCurtain Hub. All rights reserved.</p>
             </div>
-
-            <div class="footer-col">
-                <h4 class="footer-title">About</h4>
-                <p class="footer-desc">Premium curtain styling, bespoke fittings, and measured installations for homes and commercial spaces across Uganda.</p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div>
-                <p class="footer-brand">LUXECURTAIN HB</p>
-                <p class="footer-tagline">Premium Curtain Collections · Uganda</p>
-            </div>
-            <p class="footer-copyright">© 2026 LuxeCurtain Hub · All rights reserved.</p>
         </div>
     </footer>
 

@@ -69,36 +69,38 @@
     </main>
 
     <footer class="site-footer">
-        <div class="footer-shell">
-            <div class="footer-col">
-                <h4 class="footer-title">Explore</h4>
-                <ul class="footer-list">
-                    <li><a href="{{ route('home') }}">Home</a></li>
-                    <li><a href="{{ route('products') }}">Products</a></li>
-                    <li><a href="{{ route('home') }}#signature">Collection</a></li>
-                    <li><a href="{{ route('home') }}#contact">Contact</a></li>
-                </ul>
+        <div class="footer-wrapper">
+            <div class="footer-shell">
+                <div class="footer-col">
+                    <h4 class="footer-title">Explore</h4>
+                    <ul class="footer-list">
+                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('products') }}">Products</a></li>
+                        <li><a href="{{ route('home') }}#signature">Collection</a></li>
+                        <li><a href="{{ route('home') }}#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact</h4>
+                    <p class="footer-item"><a href="mailto:arrindamark@gmail.com">arrindamark@gmail.com</a></p>
+                    <p class="footer-item"><a href="tel:+256772513055">+256 772 513 055</a></p>
+                    <p class="footer-item">Kampala, Uganda</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">About</h4>
+                    <p class="footer-desc">Premium curtain styling, bespoke fittings, and measured installations for homes and commercial spaces across Uganda.</p>
+                </div>
             </div>
 
-            <div class="footer-col">
-                <h4 class="footer-title">Contact</h4>
-                <p class="footer-item"><a href="mailto:arrindamark@gmail.com">arrindamark@gmail.com</a></p>
-                <p class="footer-item"><a href="tel:+256772513055">+256 772 513 055</a></p>
-                <p class="footer-item">Kampala, Uganda</p>
+            <div class="footer-bottom">
+                <div>
+                    <p class="footer-brand">LUXECURTAIN HB</p>
+                    <p class="footer-tagline">Premium Curtain Collections · Uganda</p>
+                </div>
+                <p class="footer-copyright">© 2026 LuxeCurtain Hub. All rights reserved.</p>
             </div>
-
-            <div class="footer-col">
-                <h4 class="footer-title">About</h4>
-                <p class="footer-desc">Premium curtain styling, bespoke fittings, and measured installations for homes and commercial spaces across Uganda.</p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div>
-                <p class="footer-brand">LUXECURTAIN HB</p>
-                <p class="footer-tagline">Premium Curtain Collections · Uganda</p>
-            </div>
-            <p class="footer-copyright">© 2026 LuxeCurtain Hub. All rights reserved.</p>
         </div>
     </footer>
 
