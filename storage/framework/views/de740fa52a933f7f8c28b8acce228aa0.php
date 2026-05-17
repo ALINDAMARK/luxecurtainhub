@@ -6,7 +6,11 @@
     <p style="margin:.75rem 0 2rem;max-width:720px;line-height:1.8;color:var(--ash);">A simple gallery of the curtain products we have made. Browse the images, fabrics, and styles, then contact us if you want something similar for your space.</p>
     <div class="card-grid">
         <?php $__currentLoopData = $products; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <article class="card">
+            <article class="card product-card js-product-card" tabindex="0"
+                data-image="<?php echo e($product['image_url'] ?? 'https://i.pinimg.com/736x/87/79/54/877954c4a6f8f6549608182d802d1d2b.jpg'); ?>"
+                data-title="<?php echo e($product['name']); ?>"
+                data-category="<?php echo e($product['category']); ?>"
+                data-description="<?php echo e($product['description'] ?? 'Premium curtain design chosen for timeless interiors.'); ?>">
                 <img src="<?php echo e($product['image_url'] ?? 'https://i.pinimg.com/736x/87/79/54/877954c4a6f8f6549608182d802d1d2b.jpg'); ?>" alt="<?php echo e($product['name']); ?>" style="width:100%;height:260px;object-fit:cover;border-radius:16px;margin-bottom:1rem;">
                 <h3><?php echo e($product['name']); ?></h3>
                 <p><?php echo e($product['category']); ?></p>
